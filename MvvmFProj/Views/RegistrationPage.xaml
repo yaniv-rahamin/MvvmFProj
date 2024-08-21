@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MvvmFProj.Views.RegistrationPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:MvvmFProj.ViewModels"
+    Title="RegistrationPage"
+    x:DataType="models:AddNewUserVm">
+
+    <ScrollView Background="AntiqueWhite">
+        <VerticalStackLayout Margin="10">
+
+            <Label
+                Margin="0,30,0,0"
+                FontFamily="IndieFlower"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="create new acount"
+                TextColor="Brown"
+                VerticalOptions="Center" />
+
+            <Frame
+                Margin="0,30,0,0"
+                BackgroundColor="Ivory"
+                BorderColor="Ivory"
+                CornerRadius="25"
+                HasShadow="False"
+                HeightRequest="{Binding HeightFrameName}"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <VerticalStackLayout>
+                    <Label
+                        FontSize="8"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        IsVisible="{Binding HasErrorName}"
+                        Text="{Binding ErrorNameMessage}"
+                        TextColor="Red" />
+                    <Entry
+                        FontSize="15"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="name"
+                        PlaceholderColor="Brown"
+                        Text="{Binding Name}"
+                        TextColor="Brown" />
+
+                </VerticalStackLayout>
+            </Frame>
+            <Frame
+                BackgroundColor="Ivory"
+                BorderColor="Ivory"
+                CornerRadius="25"
+                HasShadow="False"
+                HeightRequest="100"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <VerticalStackLayout>
+                    <Label
+                        FontSize="8"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        IsVisible="False"
+                        Text=" "
+                        TextColor="Red" />
+                    <Entry
+                        FontSize="15"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="user name"
+                        PlaceholderColor="Brown"
+                        TextColor="Brown" />
+
+                </VerticalStackLayout>
+            </Frame>
+            <Frame
+                BackgroundColor="ivory"
+                BorderColor="Ivory"
+                CornerRadius="25"
+                HasShadow="False"
+                HeightRequest="{Binding HeightFramePassword}"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <VerticalStackLayout>
+                    <Label
+                        FontSize="8"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        IsVisible="{Binding HasErrorPassword}"
+                        Text="{Binding ErrorPasswordMessage}"
+                        TextColor="Red" />
+                    <Entry
+                        FontSize="15"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="password"
+                        PlaceholderColor="Brown"
+                        Text="{Binding Password}"
+                        TextColor="Brown" />
+
+                </VerticalStackLayout>
+            </Frame>
+            <Frame
+                BackgroundColor="ivory"
+                BorderColor="Ivory"
+                CornerRadius="25"
+                HasShadow="False"
+                HeightRequest="100"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <VerticalStackLayout>
+                    <Label
+                        FontSize="8"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        IsVisible="False"
+                        Text=" "
+                        TextColor="Red" />
+                    <Entry
+                        FontSize="15"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="email"
+                        PlaceholderColor="Brown"
+                        TextColor="Brown" />
+
+                </VerticalStackLayout>
+            </Frame>
+            <Frame
+                BackgroundColor="ivory"
+                BorderColor="Ivory"
+                CornerRadius="25"
+                HasShadow="False"
+                HeightRequest="100"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <VerticalStackLayout>
+                    <Label
+                        FontSize="8"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        IsVisible="False"
+                        Text=" "
+                        TextColor="Red" />
+                    <Entry
+                        FontSize="15"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="Phone"
+                        PlaceholderColor="Brown"
+                        TextColor="Brown" />
+
+                </VerticalStackLayout>
+            </Frame>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Frame
+                    BackgroundColor="ivory"
+                    BorderColor="Ivory"
+                    CornerRadius="25"
+                    HasShadow="False"
+                    HeightRequest="80"
+                    HorizontalOptions="Center"
+                    WidthRequest="160">
+                    <DatePicker
+                        Date="{Binding BirthDate}"
+                        HorizontalOptions="Center"
+                        MinimumWidthRequest="85"
+                        TextColor="Brown" />
+                </Frame>
+                <Frame
+                    BackgroundColor="ivory"
+                    BorderColor="Ivory"
+                    CornerRadius="25"
+                    HasShadow="False"
+                    HeightRequest="80"
+                    HorizontalOptions="Center"
+                    WidthRequest="120">
+                    <Label
+                        FontSize="15"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Age}"
+                        TextColor="Brown"
+                        VerticalTextAlignment="Center" />
+                </Frame>
+            </HorizontalStackLayout>
+            <Frame
+                BackgroundColor="AntiqueWhite"
+                BorderColor="AntiqueWhite"
+                CornerRadius="15"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                IsVisible="False"
+                WidthRequest="280">
+
+                <Label
+                    FontSize="8"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    IsVisible="False"
+                    Text=" "
+                    TextColor="Red" />
+            </Frame>
+            <Label
+                Margin="0,5,0,0"
+                FontSize="8"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ErrorAgeMessage}"
+                TextColor="Red" />
+            <Button
+                Margin="0,20,0,0"
+                BackgroundColor="#f5b041"
+                Command="{Binding AddUserCommand}"
+                CommandParameter="{Binding Text, Source={x:RelativeSource Mode=Self}}"
+                FontFamily="IndieFlower"
+                FontSize="20"
+                HeightRequest="50"
+                Text="registration"
+                TextColor="Brown"
+                WidthRequest="270" 
+                IsEnabled="{Binding HasErrorBtn}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
